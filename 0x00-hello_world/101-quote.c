@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 /**
- * main -A program that prints an exact line followed by a new line to the standard error
+ * main -A program that prints an exact line followed by a new line
  * Return: 1 (Successful)
  */
 int main(void)
