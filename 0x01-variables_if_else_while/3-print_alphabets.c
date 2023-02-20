@@ -1,18 +1,20 @@
 #include <stdio.h>
+
 /**
- * main - Entry point
+ * main - Display the alphabet letters in uppercase
  *
- * Return:Always 0 (success)
+ * Return;0 (Run successfully)
+ * *
  */
 
 int main(void)
 {
-	char a;
+	char alphaB;
 	
-	for ('a'; a <= 'z'; a++)
-		putchar(a);
-	for (a = 'A'; a <= 'Z'; a++)
-		putchar (a);
+	for (alphaB = 'a'; alphaB <= 'z'; alphaB++)
+		putchar(alphaB);
+	for (alphaB = 'A'; alphaB <= 'Z'; alphaB++)
+		putchar (alphaB);
 		putchar('\n');
 	return (0);
 }
