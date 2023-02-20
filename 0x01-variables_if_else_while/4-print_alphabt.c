@@ -14,7 +14,6 @@ int main(void)
 
        letter_E = 'e';
        letter_Q = 'q';
-
        for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
 	{
 		if (alphabet != letter_E && alphabet != letter_	Q)		{
