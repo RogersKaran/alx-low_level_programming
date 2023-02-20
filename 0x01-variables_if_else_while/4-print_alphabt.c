@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 /**
  * main - return alphabets except q and e
@@ -9,16 +10,15 @@
 
 int main(void)
 {
-	char ch = 'a';
+	char alphabet, letter_E,letter_Q;
 
-	while (ch <= 'z')
+       letter_E = 'e';
+       letter_Q = 'q';
+       for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
 	{
-		if ((ch != 'e') && (ch != 'e'))
-		{
-			putchar(ch);
+		if (alphabet != letter_E && alphabet != letter_	Q)		{
+			putchar(alphabet);
 		}
-		ch++;
-	}
 	putchar('\n');
 	return (0);
 }
