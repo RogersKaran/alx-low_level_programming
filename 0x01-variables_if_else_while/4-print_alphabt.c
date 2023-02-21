@@ -12,8 +12,10 @@ int main(void)
 {
 	char alphabet, letter_E, letter_Q;
 
-       letter_E = 'e';
-       letter_Q = 'q';
+
+ 	letter_E = 'e';
+	letter_Q = 'q';
+	alphabet =
      
        for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
 	{
