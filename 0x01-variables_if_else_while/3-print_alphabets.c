@@ -6,17 +6,22 @@
  * main - Display the alphabet letters in uppercase
  *
  * Return: 0 (Run successful).
- * 
+ *
  */
 
 int main(void)
 {
-	char alphaB;
+	char lower = 'a';
+	char upper = 'A';
 	
-	for (alphaB = 'a'; alphaB <= 'z'; alphaB++)
-		putchar(alphaB);
-	for (alphaB = 'A'; alphaB <= 'Z'; alphaB++)
-		putchar(alphaB);
-	putchar('\n');
-	return (0);
+	for (a = 'a'; a <= 'z'; a++;
+		{
+			for (alphaB = 'A'; alphaB <= 'Z'; alphaB++)
+			{
+				putchar('A');
+			}
+			putchar('a');
+			putchar('\n');
+			return (0);
+		}
 }
