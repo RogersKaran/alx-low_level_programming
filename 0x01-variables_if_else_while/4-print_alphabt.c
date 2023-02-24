@@ -10,18 +10,16 @@
 
 int main(void)
 {
-	char alphabet, letter_E, letter_Q;
-
-
- 	letter_E = 'e';
-	letter_Q = 'q';
-	alphabet =
-     
-       for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
+	char c;
+	
+	for (c = 'a'; c <= 'z'; c++)
 	{
-		if (alphabet != letter_E && alphabet != letter_	Q)		{
+		if (c != 'e' && c != 'q')
+		{
 			putchar(alphabet);
+		}
+		putchar(c);
+		putchar('\n');
+		return (0);
 	}
-	putchar('\n');
-	return (0);
 }
