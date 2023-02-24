@@ -2,13 +2,13 @@
 /**
  * main - a program that prints all single numbers
  *
- * Result: result 0 (success)
+ * Return: always 0 (success)
  */
+
 int main(void)
 {
 	int a;
-
-	printf("\n");/*prints a new line*/
+	/*prints a new line*/
 
 	a = 0;
 	while
@@ -19,4 +19,3 @@ int main(void)
 	}
 	return (0);
 }
-
