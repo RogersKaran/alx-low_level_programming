@@ -7,15 +7,11 @@
 
 int main(void)
 {
-	int b;
-	/*prints a new line*/
+	int i;
 
-	b = 0;
-	while
-		(b <= 10)
+	for (i = 0; i < 10; i++)
 	{
-		putchar(b);
-		b++;
+		putchar(i + '0');
 	}
 	putchar('\n');
 	return (0);
