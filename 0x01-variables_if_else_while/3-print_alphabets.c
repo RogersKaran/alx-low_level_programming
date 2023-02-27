@@ -11,17 +11,14 @@
 
 int main(void)
 {
-	char lower = 'a';
-	char upper = 'A';
+	char c;
 	
-	for (a = 'a'; a <= 'z'; a++;
-		{
-			for (alphaB = 'A'; alphaB <= 'Z'; alphaB++)
-			{
-				putchar('A');
-			}
-			putchar('a');
-			putchar('\n');
-			return (0);
-		}
+	for (c = 'a'; c <= 'z'; c++)
+		putchar(c);
+
+	for (c = 'A'; c <= 'Z'; c++)
+		putchar(c);
+	
+	putchar('\n');
+	return (0);
 }
