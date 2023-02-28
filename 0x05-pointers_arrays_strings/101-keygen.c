@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
+#define PASSWORD_LENGTH 11
+
 /**
  *srand - seeds a random number genearator
  *Return: Always 0 (success)
@@ -9,30 +11,17 @@
 
 int main(void)
 {
-	char password[PASSWORD_LENGTH + 1];
-	int i, r;
-	
+	char password[PASSWORD_LENGTH];
+	int i;
+
 	srand(time(NULL));
-	
-	for (i = 0; i < PASSWORD_LENGTH; i++)
+
+	for (i = 0; i < PASSWORD_LENGTH - 1; i++)
 	{
-		r = rand() % 62;
-		
-		if (r < 26)
-		{
-			password[i] = 'A' + r;
-		}
-		else if (r < 52)
-		{
-			password[i] = 'a' + (r - 26);
-		}
-		else
-		{
-			password[i] = '0' + (r - 52);
-		}
+		password[i] = rand() % 94 + 33;
 	}
-	password[PASSWORD_LENGTH] = '\0';
+	password[PASSWORD_LENGTH - 1] = '\0';
+
 	printf("%s\n", password);
 	return (0);
 }
-
