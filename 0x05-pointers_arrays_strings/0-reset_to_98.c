@@ -3,7 +3,7 @@
 /**
  * main - take a pointer to an int as parameter
  * @n: indicates where to start
- * reset_to_98 - sets the value of an integer variable to 98
+ * reset_to_98 - resets the value of an integer variable to 98
  * Return: nothing
  */
 
