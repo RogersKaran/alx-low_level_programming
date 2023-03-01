@@ -2,7 +2,7 @@
 
 /**
  * _isalpha - checks for uppercase characters
- *
+ *@c: The characters to check
  * Return: 0 (success) and 1 (failed)
  */
 
