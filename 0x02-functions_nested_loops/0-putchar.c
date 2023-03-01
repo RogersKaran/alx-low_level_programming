@@ -9,7 +9,7 @@
 int main(void)
 {
 	char c = '_';
-	
+
 	write(STDOUT_FILENO, &c, 1);
 	c = 'p';
 	write(STDOUT_FILENO, &c, 1);
