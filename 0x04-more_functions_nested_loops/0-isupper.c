@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * main - checks for uppercase characters
+ * _isalpha - checks for uppercase characters
+ *
  * Return: 0 (success) and 1 (failed)
  */
 
