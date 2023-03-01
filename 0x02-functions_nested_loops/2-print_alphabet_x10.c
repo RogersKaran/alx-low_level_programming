@@ -3,6 +3,8 @@
 
 /**
  * print_alphabet_x10 -Make alphabet x10
+ * _putchar: Prints out the result
+ *
  * Return: void
  */
 
