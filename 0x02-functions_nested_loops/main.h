@@ -1,3 +1,6 @@
+#ifndef MAIN_H
+#define MAIN_H
+
 int _putchar(char c);
 
 void print_alphabet(void);
@@ -23,3 +26,5 @@ int add(int, int);
 void Print_to_98(int ni);
 
 void print_times_tabled(int n);
+
+#endif
