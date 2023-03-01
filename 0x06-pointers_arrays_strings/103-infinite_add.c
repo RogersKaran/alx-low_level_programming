@@ -61,6 +61,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	}
 
 	r[k] = '\0';
-	strrev(r);
+	strsep(r);
 	return (r);
 }
