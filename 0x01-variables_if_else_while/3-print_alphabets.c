@@ -3,20 +3,19 @@
 #include <time.h>
 
 /**
- * main - Display the alphabet letters in uppercase
- *
+ * _islower - Display the alphabet letters in uppercase
+ *@c: The character to check
  * Return: 0 (Run successful).
  */
 
-int main(void)
+int _islower(int c)
 {
-	char c;
-
-	for (c = 'a'; c <= 'z'; c++)
-		putchar(c);
-
-	for (c = 'A'; c <= 'Z'; c++)
-		putchar(c);
-	putchar('\n');
-	return (0);
+	if (c >= 'a' && c <= 'z')
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
