@@ -1,4 +1,5 @@
-nclude "main.c"
+#include <stdio.h>
+#include "main.h"
 
 /**
  * print_sign - Prints the sign of a a number
@@ -6,7 +7,7 @@ nclude "main.c"
  * Return: 0 for positive num, 1 for negative num
  */
 
-int print_sigh(int n)
+int print_sign(int n)
 {
 	if (n > 0)
 	{
