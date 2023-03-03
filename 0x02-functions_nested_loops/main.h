@@ -7,9 +7,9 @@ void print_alphabet(void);
 
 void print_alphabet_x10(void);
 
-void _islower(int c);
+int _islower(int c);
 
-void _isalpha(int c);
+int _isalpha(int c);
 
 int print_sign(int n);
 
@@ -25,6 +25,6 @@ int add(int, int);
 
 void Print_to_98(int ni);
 
-void print_times_tabled(int n);
+void print_times_table(int n);
 
 #endif
