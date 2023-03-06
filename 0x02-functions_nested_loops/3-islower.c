@@ -1,4 +1,5 @@
 #include "main.h"
+#include <ctype.h>
 
 /**
  * _islower - Checks for lower case character(s)
@@ -8,7 +9,7 @@
 
 int _islower(int c)
 {
-	if (c <= 'a' && c <= 'z')
+	if (c >= 'a' && c <= 'z')
 	{
 		return (1);
 	}
