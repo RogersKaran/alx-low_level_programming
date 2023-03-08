@@ -5,8 +5,16 @@
  * _strlen_recursion - Bsse case
  * @s: Char to check
  *
- * REturn: The length of a string.
+ * Return: The length of a string.
  */
+
+int main(void)
+{
+        char str[] = "Hello, world!";
+
+        printf("The length of string '%s' is %d\n", str, _strlen_recursion(str));
+        return (0);
+}
 
 int _strlen_recursion(char *s)
 {
@@ -15,12 +23,4 @@ int _strlen_recursion(char *s)
 			return (0);
 	else
 		return (1 + _strlen_recursion(s + 1));
-}
-
-int main(void)
-{
-	int str[] = "Hello, world!";
-
-	printf("The length of the string '%s' is %d\n", str, _strlen_recursion(str));
-	return (0);
 }
