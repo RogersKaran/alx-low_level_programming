@@ -10,24 +10,10 @@
 
 int factorial(int n)
 {
-	if (n == 0 || n == 1)
+	if (n == 0)
 		return (1);
 	else if (n < 0)
 		return (-1);
 	else
 		return (n * factorial(n - 1));
-}
-
-/**
- * main - Calculates the factorial of n
- *
- * Return: The factorial number.
- */
-
-int main(void)
-{
-	int n = 5;
-
-	printf("%d! = %d\n", n, factorial(n));
-	return (0);
 }
