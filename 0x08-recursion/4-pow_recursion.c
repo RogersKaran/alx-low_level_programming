@@ -19,18 +19,3 @@ int _pow_recursion(int x, int y)
 	else
 		return (x * _pow_recursion(x, y - 1));
 }
-
-/**
- * main - Intializes the program.
- *
- * Return: 0 (success)
- */
-
-int main(void)
-{
-	int x = 2;
-	int y = 5;
-
-	printf("%d^%d = %d\n", x, y, _pow_recursion(x, y));
-	return (0);
-}
