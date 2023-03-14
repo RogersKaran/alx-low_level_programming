@@ -1,24 +1,24 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * print a triangle followed by a new line
+ * print_triangle - Print a triangle followed by a new line
  * @size: sixe of the triangle
  */
 
 void print_triangle(int size)
 {
 	if (size <= 0)
+		putchar('\n');
+	else
 	{
-		_putchar('\n');
-		return;
-	}
-	int i, j;
-	
-	for (i = 1; i <= size; i++)
-	{
-		for (j = 1; j <= i; j++)
+		int i, j;
+
+		for (i = 1; i <= size; i++)
 		{
-			_putchar('#');   // print the character '#'
-		}_putchar('\n');   // print a new line character
+			for (j = 1; j <= i; j++)
+				putchar('#');
+			putchar('\n');
+		}
 	}
 }
