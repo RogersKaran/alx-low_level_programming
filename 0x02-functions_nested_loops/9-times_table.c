@@ -9,14 +9,10 @@
 
 void times_table(void)
 {
-	int i, j;
-	
-	for (i = 0; i <= 9; i++)
+	int i;
+
+	for (i = 0; i <= 10; i++)
 	{
-		for (j = 0; j <= 10; j++)
-		{
-			printf("%d\t", i * j);
-		}
-		printf("\n");
+		printf("9 x %d = %d\n", i, i * 9);
 	}
 }
