@@ -4,7 +4,7 @@
  * _abs - Computing the absolute value of an integer
  * @num: The integer to be be completed
  *
- * Return; Absolute value or zero
+ * Return: Absolute value or zero
  * Return2: Less than 0 num
  */
 
