@@ -1,8 +1,11 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_line -draws a straight line kwa terminal
  * @n: num of times the character _ should print
+ *
+ * Return: void
  */
 
 void print_line(int n)
@@ -15,11 +18,11 @@ void print_line(int n)
 	else
 	{
 		int i;
-		
+
 		for (i = 0; i < n; i++)
 		{
-			_putchar('_');   // print the character '_'
+			_putchar('_');
 		}
-		_putchar('\n');   // print a new line character
+		_putchar('\n');
 	}
 }
