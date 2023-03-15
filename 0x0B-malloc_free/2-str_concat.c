@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
-#include <string.h>
+#include <stdio.h>
 
 /**
  * str_concat - Hypothetical fxn that conca 2 strings.
@@ -12,19 +12,43 @@
 
 char *str_concat(char *s1, char *s2)
 {
+	int i = 0, j = 0, k = 0, l = 0;
+	char *s;
+
 	if (s1 == NULL)
 		s1 = "";
 
 	if (s2 == NULL)
 		s2 = "";
 
-	char *concat = malloc(sizeof(char) * (strlen(s1) + strlen(s2) + 1));
+	while (s1[i])
+		i++;
 
-	if (concat == NULL)
+	while (s2[j])
+		j++;
+
+	l = i + j;
+	s = malloc((sizeof(char) * l) + 1);
+
+	if (s == NULL)
 		return (NULL);
 
-	strcpy(concat, s1);
-	strcat(concat, s2);
+	j = 0;
 
-	return (concat);
+	while (k < l)
+	{
+		if (k <= i)
+			s[k] = s1[k];
+
+		if (k >= i)
+		{
+			s[k] = s2[j];
+			j++;
+		}
+
+		k++;
+	}
+
+	s[k] = '\0';
+	return (s);
 }
