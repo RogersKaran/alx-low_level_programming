@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * alloc_grid - Hypothetical fxn alllcating mem for 2-dim array of integers
+ * alloc_grid - Print a grid of integers.
  * @width: Dimenaion 1.
  * @height: Dimension 2.
  *
@@ -11,41 +11,45 @@
 
 int **alloc_grid(int width, int height)
 {
+	int i, j, k, l;
+	int **a;
+
 	if (width <= 0 || height <= 0)
-		return (NULL);
-
-	int **grid = malloc(sizeof(int *) * height);
-
-	if (grid == NULL)
-		return (NULL);
-
-	int i = 0;
-
-	while (i < height)
 	{
-		i++;
-		grid[i] = malloc(sizeof(int) * width);
+		return (NULL);
+	}
 
-		if (grid[i] == NULL)
+	a = malloc((sizeof(int *) * height);
+
+	if (a == NULL)
+	{
+		free(a);
+		return (NULL);
+	}
+
+	for (i = 0; i < height; i++)
+	{
+		a[i] = malloc(sizeof(int) * width);
+
+		if (a[i] == NULL)
 		{
-			int j = 0;
-
-			while (j < i)
+			for (j = 1; j >= 0; j--)
 			{
-				j++;
-				free(grid[j]);
+				free(a[j]);
 			}
-			free(grid);
-			return (NULL);
-		}
-		int j = 0;
 
-		while (j < width)
-		{
-			j++;
-			grid[i][j] = 0;
+			free(a);
+			return (NULL);
 		}
 	}
 
-	return (grid);
+	for (k = 0; k < height; k++)
+	{
+		for (l = 0; l < width; l++)
+		{
+			a[k][l] = 0;
+		}
+	}
+
+	return (a);
 }
