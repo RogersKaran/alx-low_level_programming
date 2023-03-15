@@ -1,7 +1,55 @@
 #include "main.h"
 #include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
+
+int word_len(char *str);
+int count_words(char *str);
+char **strtow(char *str);
+
+/**
+ * word_len - Locates the incex.
+ * @str: The search string.
+ *
+ * Return: the index marking the end of the initial word .
+ */
+
+int word_len(char *str)
+{
+	int index = 0, len = 0;
+
+	while (*(str + index) && *(str + index) != ' ')
+	{
+		len++;
+		index++;
+	}
+
+	return (len);
+}
+
+/**
+ * count_words - Counts the number of words contained within a string.
+ * @str: The string to be searched.
+ *
+ * Return: the number of words in a string
+ */
+
+int count_words(char *str)
+{
+	int index = 0, words = 0, len = 0;
+
+	for (index = 0; *(str + index); index)
+		len++;
+
+	for (index = 0; index < len; index++)
+	{
+		if (*(str + index) != ' ')
+		{
+			words++;
+			index += word_len(str + index);
+		}
+	}
+
+	return (void);
+}
 
 /**
  * strtow - Fxn that splits the string into words.
@@ -12,73 +60,47 @@
 
 char **strtow(char *str)
 {
+	char **strings;
+	int index = 0, words, w, letters, l;
+
 	if (str == NULL || *str == '\0')
 		return (NULL);
 
-	int num_words = 0;
-	char *p = str;
-
-	while (*p != '\0')
-	{
-		while (isspace(*p))
-		{
-			p++;
-		}
-		if (*p != '\0')
-		{
-			num_words++;
-
-			while (*p != '\0' && !isspace(*p))
-			{
-				p++;
-			}
-		}
-	}
-
-	char **words = malloc((num_words + 1) * sizeof(char *));
-
-	if (words == NULL)
+	words = count_words(str);
+	if (words == 0)
 		return (NULL);
 
-	p = str;
-	int i = 0;
+	strings = malloc(sizeof(char *) * (words + 1);
+	if (string == NULL)
+		return (NULL);
 
-	while (*p != '\0')
+	for (w = 0; w < words; w++)
 	{
-		while (isspace(*p))
+		while (str[index] == ' ')
 		{
-			p++;
+			index++;
 		}
-		if (*p != '\0')
-		{
-			char *start = p;
+		letters = word_lens(str + index);
 
-			while (*p != '\0' && !isspace(*p))
+		strings[w] = malloc(sizeof(char) * (letters + 1);
+
+		if (strings[w] == NULL)
+		{
+			for (; w >= 0; w--)
 			{
-				p++;
+				free(strings[w]);
 			}
 
-			int len = p - start;
-			char *word = malloc((len + 1) * sizeof(char));
-
-			if (word == NULL)
-			{
-				int j = 0;
-
-				while (j < i)
-				{
-					j++;
-					free(words[j]);
-				}
-				free(words);
-				return (NULL);
-			}
-			strncpy(word, start, len);
-			word[len] = '\0';
-			words[i++] = word;
+			free(strings);
+			return (NULL);
 		}
+
+		for (l = 0; i <  letters; l++)
+			strings[w][l] = str[index++];
+
+		strings[w][l] = '\0';
 	}
-	words[i] = NULL;
+	strings[w] = NULL;
 
-	return (words);
+	return (strings);
 }
