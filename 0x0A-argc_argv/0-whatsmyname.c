@@ -3,7 +3,7 @@
 
 /**
  * main - Print its name
- * @arg: Argument count
+ * @argc: Argument count
  * @argv: Argument vector
  *
  * Return: Always zero.
