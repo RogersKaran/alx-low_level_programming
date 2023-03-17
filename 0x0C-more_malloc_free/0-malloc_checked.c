@@ -3,21 +3,20 @@
 #include <stdlib.h>
 
 /**
- * malloc_checked - 
- * @ptr: 
+ * malloc_checked - Allocates memmory
  * @b: Unsigned integer as input.
  *
- * Exit: Terminates the process with status value 98.
+ * Exit: Terminates the process with status value 98
+ * Return: Nothing.
  */
 
 void *malloc_checked(unsigned int b)
 {
-	void *ptr = malloc(b);
+	void *ptr;
+	ptr = malloc(b);
 
 	if (ptr == NULL)
-	{
-		fprintf(stderr, "malloc failed\n");
 		exit(98);
-	}
+
 	return (ptr);
 }

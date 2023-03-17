@@ -4,7 +4,7 @@
 #include <string.h>
 
 /**
- * string_nconcat - 
+ * string_nconcat - combines strings
  * @s1: String
  * @s2: String
  * @n: unsigned integer rep.ing the no of chars to concatenate.
@@ -14,24 +14,45 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
+	unsigned int i = 0, j = 0, k = 0, l = 0;
+	char *str;
+
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 
-	size_t s1_len = strlen(s1);
-	size_t s2_len = strlen(s2);
+	while (s1[i])
+		i++;
 
-	if (n >= s2_len)
-		n = s2_len;
-	
-	char *result = malloc(s1_len + n + 1);
+	while  (s1[i])
+		k++;
 
-	if (result == NULL)
+	if (n >= k)
+		l = i + k;
+	else
+		l = i + n;
+
+	str = malloc(sizeof(char) * l + 1);
+
+	if (str == NULL)
 		return (NULL);
 
-	memcpy(result, s1, s1_len);
-	memcpy(result + s1_len, s2, n);
-	result[s1_len + n] = '\0';
-	return (result);
+	k = 0;
+
+	while (j < l)
+	{
+		if (j <= i)
+			str[j] = s1[j];
+
+		if (j >= i)
+		{
+			str[j] = s1[j];
+			k++;
+		}
+		j++;
+	}
+	str[j] = '\0';
+	return (str);
 }
+
