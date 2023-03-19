@@ -5,16 +5,16 @@
 #include <stdlib.h>
 
 /**
- * _calloc: 
+ * _calloc - Allocates memory dynamically.
  * @size: size of p
- * @nmeb:
+ * @nmemb: Represents the size of objects in memory.
  *
  * Return: The pointer.
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int i =0, l =0;
+	int i = 0, l = 0;
 	char *ptr;
 
 	if (nmemb == 0 || size == 0)
@@ -22,14 +22,14 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	l = nmemb * size;
 	ptr = malloc(l);
-	
+
 	if (ptr == NULL)
 		return (NULL);
-	
+
 	while (i < l)
 	{
+
 		ptr[i] = 0;
-	       	
 		i++;
 	}
 	return (ptr);
