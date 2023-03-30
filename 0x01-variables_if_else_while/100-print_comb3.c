@@ -8,21 +8,20 @@
 
 int main(void)
 {
-	int ones = 0;
-	int tens = 0;
+	int i, j;
 
-	for (tens = 0; tens <= 9; tens++)
+	for (i = 0; i <= 8; i++)
 	{
-		for (ones = tens + 1; ones <= 9; ones++)
+		for (j = i + 1; j <= 9; j++)
 		{
-			putchar(tens + '0');
-			putchar(ones + '0');
+			putchar( '0' + i);
+			putchar('0' + j );
 
-			if (ones < 8)
-			{
-				putchar(',');
-				putchar(' ');
-			}
+			if (i != 8 || j != 9)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 		}
 	}
 
