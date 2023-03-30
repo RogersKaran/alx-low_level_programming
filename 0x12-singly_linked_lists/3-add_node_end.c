@@ -11,44 +11,41 @@
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new_node;
-       	list_t *temp = *head;
-	unsigned int len = 0;
-
-	while (str[len])
-		len++;
-
-	if (str == NULL)
-		return (NULL);
-
-	new_node = malloc(sizeof(list_t));
-
-	if (new_node == NULL)
-		return (NULL);
-
-	new_node->str = strdup(str);
-
-	if (new_node->str == NULL)
-	{
-		free(new_node);
-		return (NULL);
-	}
-
-	new_node->len = strlen(str);
-	new_node->next = NULL;
+	list_t *new_node, *end_node;
+       	unsigned int n = 0;
 
 	if (*head == NULL)
 	{
+		new_node = malloc(sizeof(list_t));
+		if (new_node == NULL)
+			return (NULL);
+		
+		new_node->next = NULL;
 		*head = new_node;
-		return (new_node);
+		new_node->str = strdup(str);
+		while (str[n] != '\0')
+			n++;
+		new_node->len = n;
 	}
+	else
+	{
+		end_node = *head;
+		while (1)
+		{
+			if (end_node->next == NULL)
+				break;
+			end_node = end_node->next;
+		}
+		new_node = malloc(sizeof(list_t));
+		if (new_node == NULL)
+			return (NULL);
+		new_node->next = NULL;
+		end_node->next = new_node;
+		new_node->str = strdup(str);
 
-	temp = *head;
-
-	while (temp->next != NULL)
-		temp = temp->next;
-
-	temp->next = new_node;
-
+		while (n <strlen(str))
+				n++;
+		new_node->len = n;
+	}
 	return (new_node);
 }

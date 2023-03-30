@@ -7,6 +7,6 @@ void print_before_main(void)_attribute_((constructor));
  */
 void print_before_main(void)
 {
-	Printf("You're beat! and yet, you must allow,\n"
-			"I bore my house upon my back!\n");
+	Printf("You're beat! and yet, you must allow,\n");
+	printf("I bore my house upon my back!\n");
 }
